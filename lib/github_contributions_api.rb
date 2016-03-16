@@ -10,9 +10,7 @@ module GithubContributionsApi
   # @example GithubContributionsApi.user("octocat")
   # @return [Hash]
   def self.user(github_username)
-    #raise MissingUsername unless github_username
     request_url = "#{URL_BASE}/user/#{github_username}"
-
     response = HTTParty.get(request_url)
     JSON.parse(response.body)
   end
@@ -26,13 +24,9 @@ module GithubContributionsApi
   # @example GithubContributionsApi.user_events("s2t2", :page => 2)
   # @return [Hash]
   def self.user_events(github_username, options = {})
-    #raise MissingUsername unless github_username
     page_number = options[:page] || 1
     request_url = "#{URL_BASE}/user/#{github_username}/events/#{page_number}"
-
     response = HTTParty.get(request_url)
     JSON.parse(response.body)
   end
-
-  #class MissingUsername < ArgumentError ; end
 end

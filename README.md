@@ -1,20 +1,14 @@
-# GithubContributionsApi
+# Github Contributions API - Ruby
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/github_contributions_api`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A ruby interface to the [GitHub Contributions Archive](https://githubcontributions.io) API. Get information about GitHub users and events, including all repositories a user has contributed to. No authentication required.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's Gemfile before running `bundle install`:
 
 ```ruby
 gem 'github_contributions_api'
 ```
-
-And then execute:
-
-    $ bundle
 
 Or install it yourself as:
 
@@ -22,9 +16,34 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Github User
+
+Get Github User information, including all repositories contributed to.
+
+```` sh
+user = GithubContributionsApi.user("octocat")
+````
+
+### Github Events
+
+Get Events information for a given Github User. By default, this returns the first page of available results.
+
+```` sh
+events = GithubContributionsApi.user_events("octocat")
+````
+
+Optionally specify the page number for users who have more than one page of events.
+
+```` sh
+events = GithubContributionsApi.user_events("s2t2", :page => 2)
+````
 
 ## Development
+
+```` sh
+git clone _________
+cd ____/
+````
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
@@ -32,10 +51,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/github_contributions_api.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/data-creative/github-contributions-api-ruby.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-

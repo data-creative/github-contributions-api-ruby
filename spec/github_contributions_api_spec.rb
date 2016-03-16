@@ -5,7 +5,15 @@ describe GithubContributionsApi do
     expect(GithubContributionsApi::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  describe '#user' do
+    it 'does something useful' do
+      expect(false).to eq(true)
+    end
+  end
+
+  describe '#user_events' do
+    it 'does something useful' do
+      expect(false).to eq(true)
+    end
   end
 end

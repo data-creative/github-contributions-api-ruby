@@ -30,9 +30,15 @@ describe GithubContributionsApi do
         expect(events["events"]).to_not be_empty
       end
 
-      it 'suppots pagination options' do
-        events = GithubContributionsApi.user_events("s2t2", :page => 2)
+      it 'supports pagination options' do
+        events = GithubContributionsApi.user_events("octocat", :page => 2)
         expect(events["currentPage"]).to eql(2)
+      end
+
+      it 'gets subsequent pages of data' do
+        events = GithubContributionsApi.user_events("s2t2", :page => 3)
+        expect(events["currentPage"]).to eql(3)
+        expect(events["events"]).to_not be_empty
       end
     end
   end

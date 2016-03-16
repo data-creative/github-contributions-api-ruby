@@ -7,11 +7,11 @@ Gem::Specification.new do |spec|
   spec.name          = "github_contributions_api"
   spec.version       = GithubContributionsApi::VERSION
   spec.authors       = ["MJ Rossetti"]
-  spec.email         = ["s2t2mail+github@gmail.com"]
+  spec.email         = ["datacreativellc@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{A ruby interface to the GitHub Contributions Archive API (https://githubcontributions.io). Get information about GitHub users and events, including all repositories a user has contributed to. No authentication required.}
+  spec.description   = %q{A ruby interface to the GitHub Contributions Archive API (https://githubcontributions.io). Get information about GitHub users and events, including all repositories a user has contributed to. No authentication required.}
+  spec.homepage      = "https://github.com/data-creative/github-contributions-api-ruby"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

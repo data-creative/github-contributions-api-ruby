@@ -24,7 +24,7 @@ describe GithubContributionsApi do
   end
 
   describe '#user_events' do
-    context "when the user exists" do
+    context "when the user exists and has events" do
       it 'gets a list of events for the given user' do
         events = GithubContributionsApi.user_events("octocat")
         expect(events["events"]).to_not be_empty

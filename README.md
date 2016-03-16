@@ -22,6 +22,7 @@ Get GitHub user information, including all repositories contributed to.
 
 ```` sh
 user = GithubContributionsApi.user("octocat")
+
 #=> {
 #  "username":"octocat",
 #  "repos":[
@@ -43,6 +44,7 @@ Get events information for a given GitHub user. By default, this returns the fir
 
 ```` sh
 events = GithubContributionsApi.user_events("octocat")
+
 #=> {
 #  "events":[
 #    {
@@ -80,7 +82,7 @@ events = GithubContributionsApi.user_events("octocat")
 #}
 ````
 
-Optionally specify the page number for users who have more than one page of events.
+Optionally traverse pagination for users who have more than one page of events.
 
 ```` sh
 events = GithubContributionsApi.user_events("s2t2", :page => 2)

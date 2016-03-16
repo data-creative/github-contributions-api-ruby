@@ -2,7 +2,9 @@ require "github_contributions_api/version"
 require 'json'
 require "httparty"
 
+# A ruby interface to the GitHub Contributions Archive API (https://githubcontributions.io). To the author's knowlege, this API is undocumented.
 module GithubContributionsApi
+  # The prexix for all GitHub Contributions API endpoints.
   URL_BASE = "https://githubcontributions.io/api"
 
   # Get information about a given github user.
